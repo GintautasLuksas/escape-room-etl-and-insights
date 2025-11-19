@@ -10,7 +10,7 @@ The dataset covers the years **2019–2025**.
 
 ### Project Structure
 ```
-escape-room-project/
+escape-room-etl-and-insights/
 │
 ├── data/
 ├──   └── sample_data_structure.csv
@@ -46,7 +46,7 @@ Source files originated from multiple Excel sheets with differing structures for
 
 ---
 
-### Data Cleaning & Preparation
+### Data Cleaning and Preparation
 
 **Goal:**  
 Prepare and standardize escape room data from cities, ensuring consistency across years and cities.
@@ -82,9 +82,9 @@ Normalize data values and enforce consistent business rules.
 
 **Process:**  
 - Set **default prices** according to booking period.  
-- Collapse **team size groups** from 22 → 8 categories.  
-- Collapse **celebration groups** from 14 → 5 categories.  
-- Collapse **source groups** from 30 → 6 categories.  
+- Collapse **team size groups** to 8 categories.  
+- Collapse **celebration groups** to 5 categories.  
+- Collapse **source groups** from to 6 categories.  
 - Standardize **room names** using a mapping table.  
 - Apply **regex** for text cleanup and normalization.  
 - Round start times to one of six predefined **casual time slots**.  
