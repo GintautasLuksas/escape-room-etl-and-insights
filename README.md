@@ -138,6 +138,10 @@ Combine cleaned cities datasets into a single unified CSV.
 
 **Final Output:**  
 
+
+![escape_rooms_2019_2025](data/data_example.png)
+
+
 escape_rooms_2019_2025.csv
 
 ---
