@@ -13,7 +13,8 @@ The dataset covers the years **2019–2025**.
 escape-room-etl-and-insights/
 │
 ├── data/
-├──   └── sample_data_structure.csv
+├─────├── data_example.png // short example in png format
+├──   └── full_data.csv   //example of final data, ready for Power BI analysis
 │
 │   ├── EscapeRoom_Dashboard.pbix
 │   └── screenshots/
