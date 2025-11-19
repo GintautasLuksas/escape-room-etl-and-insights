@@ -71,7 +71,7 @@ if __name__ == "__main__":
 
     city1_file = os.path.join(BASE_DIR, "data", "city1", "cleaned", "city1_all.csv")
     city2_file = os.path.join(BASE_DIR, "data", "city2", "cleaned", "city2_all.csv")
-    output_file = os.path.join(BASE_DIR, "data", "full_data.csv")
+    output_file = os.path.join(BASE_DIR, "data", "escape_rooms_2019_2025.csv")
 
     print("City1 file exists:", os.path.exists(city1_file))
     print("City2 file exists:", os.path.exists(city2_file))
