@@ -239,14 +239,12 @@ def clean_price_series_City1(price_series: pd.Series, file_year: int) -> pd.Seri
     while i < n:
         val = values[i].strip()
 
-        # --- Extract numeric price if valid (30–600) ---
         matches = re.findall(r'\d+', val)
         valid_matches = [int(m) for m in matches if 30 <= int(m) <= 600]
 
         if valid_matches:
             total_price = valid_matches[0]
 
-            # Count following empty/NO_PRICE/NAN rows as part of merged block
             j = i + 1
             empty_count = 0
             while j < n and values[j].strip() in ["", "NO_PRICE", "NAN"]:
@@ -256,7 +254,7 @@ def clean_price_series_City1(price_series: pd.Series, file_year: int) -> pd.Seri
             block_size = 1 + empty_count
             leftover = max(total_price - default_price * empty_count, default_price)
 
-            # First row gets leftover, rest get default
+            # First row gets leftover, rest get default price. Merged excel cells with multaple rooms.
             cleaned.append(f"{leftover}E")
             for _ in range(empty_count):
                 cleaned.append(f"{default_price}E")
@@ -287,7 +285,6 @@ def clean_escape_time(value):
         return "-"
     value_str = str(value).strip()
     try:
-        # Use pandas to_timedelta for parsing
         td = pd.to_timedelta(value_str)
         total_minutes = td.total_seconds() / 60
         return round(total_minutes, 2)  # rounded to 2 decimals

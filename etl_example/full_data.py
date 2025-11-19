@@ -28,7 +28,6 @@ def merge_city_data(city1_path, city2_path, output_path):
 
     merged_df = pd.concat([df1, df2], ignore_index=True, sort=False)
 
-    # Standardize column names
     merged_df.rename(columns={
         "OriginalPrice": "Price",
         "HelperCount": "Helpers",
